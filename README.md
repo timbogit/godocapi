@@ -30,5 +30,7 @@ queried via HTTP/JSON.
   * how to have workers access it.
 * package structure
   * where to place models? (unit of reuse for golang, should be ~= to a Java class)
-  * see [[this article|https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1]]
+  * see [this article](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1)
+* make a presentation using (go present][https://godoc.org/golang.org/x/tools/present]
+* look at [Akshay's Makefile](https://github.com/akshayjshah/dotfiles/blob/master/Makefile#L8)
 
