@@ -22,3 +22,13 @@ queried via HTTP/JSON.
 * http://golang.org/s/oracle-user-manual
 * https://www.codementor.io/codehakase/building-a-restful-api-with-golang-a6yivzqdo
 * https://github.com/golang/dep
+
+# To Do:
+* introduce concurrency via worker pool for shelling out
+  * how to balance load, what to do when high load makes me run out of workers
+* caching
+  * how to have workers access it.
+* package structure
+  * where to place models? (unit of reuse for golang, should be ~= to a Java class)
+  * see [[this article|https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1]]
+
