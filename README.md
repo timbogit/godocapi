@@ -20,3 +20,5 @@ queried via HTTP/JSON.
 
 * http://godoc.org/code.google.com/p/go.tools/cmd/godoc
 * http://golang.org/s/oracle-user-manual
+* https://www.codementor.io/codehakase/building-a-restful-api-with-golang-a6yivzqdo
+* https://github.com/golang/dep
