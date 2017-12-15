@@ -21,6 +21,7 @@ queried via HTTP/JSON.
 * http://godoc.org/code.google.com/p/go.tools/cmd/godoc
 * http://golang.org/s/oracle-user-manual
 * https://www.codementor.io/codehakase/building-a-restful-api-with-golang-a6yivzqdo
+* https://medium.com/@marcus.olsson/writing-a-go-client-for-your-restful-api-c193a2f4998c
 * https://github.com/golang/dep
 
 # To Do:
@@ -31,6 +32,6 @@ queried via HTTP/JSON.
 * package structure
   * where to place models? (unit of reuse for golang, should be ~= to a Java class)
   * see [this article](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1)
-* make a presentation using (go present][https://godoc.org/golang.org/x/tools/present]
+* make a presentation using [go present](https://godoc.org/golang.org/x/tools/present)
 * look at [Akshay's Makefile](https://github.com/akshayjshah/dotfiles/blob/master/Makefile#L8)
 
