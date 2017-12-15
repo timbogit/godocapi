@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/timbogit/godocapi/mux"
-	"github.com/timbogit/godocapi/shell"
+"github.com/timbogit/godocapi/mux"
+"github.com/timbogit/godocapi/shell"
 )
 
 func main() {
