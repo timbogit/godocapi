@@ -1,18 +1,17 @@
 package shell
 
-import (
-	"github.com/timbogit/godocapi"
-)
-
 // Client creates a connection to the services
 type CommandClient struct {
 	service *CommandService
 }
 
+func(client *CommandClient) NewCommandService(options ...func(*CommandService)) (*CommandService, error) {
 
-func(client *CommandClient) CommandService() godocapi.CommandService {
-	client.service = &CommandService{}
+	cmdService := CommandService{}
 
-	return client.service
+	for _, option := range options {
+		option(&cmdService)
+	}
+	client.service = &cmdService
+	return &cmdService, nil
 }
-

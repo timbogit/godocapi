@@ -8,10 +8,21 @@ type CommandResults struct {
 
 // Client creates a connection to the services.
 type Client interface {
-	CommandService() CommandService
+	NewCommandService(options ...func(*CommandService)) (*CommandService, error)
 }
 
 // CommandService represents a service for managing godoc commands.
 type CommandService interface {
 	GetSource(arg string) (*CommandResults, error)
 }
+
+//func(client *Client) NewCommandService(options ...func(*CommandService)) (*CommandService, error) {
+//
+//	cmdService := CommandService{}
+//
+//	for _, option := range options {
+//		option(&cmdService)
+//	}
+//	client.service = &cmdService
+//	return &cmdService, nil
+//}

@@ -10,8 +10,8 @@ func main() {
 
 	log.Println("+++++++++ SHELL CLIENT +++++++++")
 
-	shellClient := shell.CommandClient{}
-	shellService := shellClient.CommandService()
+	shellClient := &shell.CommandClient{}
+	shellService, _ := shellClient.NewCommandService()
 	res, err := shellService.GetSource("net/http")
 
 	if err != nil {
@@ -23,8 +23,11 @@ func main() {
 
 
 	log.Println("+++++++++ HTTP CLIENT +++++++++")
-	httpClient := http.NewCommandClient("localhost:8080", "go-client/1.0.0")
-	httpService := httpClient.CommandService()
+	httpClient := http.CommandClient{}
+	httpService, _ := httpClient.NewCommandService(
+		httpClient.SetAgent("go-client/1.0"),
+		httpClient.SetBaseUrl("localhost:8080"),
+		httpClient.SetHttpClient(nil))
 	res2, err2 := httpService.GetSource("net")
 
 	if err2 != nil {
