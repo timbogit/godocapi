@@ -2,10 +2,9 @@ package main
 
 import (
 	"log"
+
 	"github.com/timbogit/godocapi"
 	"github.com/timbogit/godocapi/http"
-
-	//"github.com/timbogit/godocapi/http"
 	"github.com/timbogit/godocapi/shell"
 )
 
