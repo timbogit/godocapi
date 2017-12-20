@@ -9,10 +9,3 @@ type CommandResults struct {
 type CommandService interface {
 	GetSource(arg string) (*CommandResults, error)
 }
-
-func NewCommandService(initial CommandService, options ...func(CommandService)) (CommandService, error) {
-	for _, option := range options {
-		option(initial)
-	}
-	return initial, nil
-}
