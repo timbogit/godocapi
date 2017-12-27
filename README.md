@@ -25,6 +25,8 @@ queried via HTTP/JSON.
 * https://github.com/golang/dep
 
 # To Do:
+* Restructure the `mux.Router` to have something like an `InitializeRoutes` and slug to feed in for better testability
+  * see also [this article](https://semaphoreci.com/community/tutorials/building-and-testing-a-rest-api-in-go-with-gorilla-mux-and-postgresql) for ideas how to better test such an API (including potentially having an `app.go`)
 * introduce concurrency via worker pool for shelling out
   * how to balance load, what to do when high load makes me run out of workers
 * caching

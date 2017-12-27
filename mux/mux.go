@@ -52,3 +52,7 @@ func NewRouter() *Router {
 func (r *Router) HandleGet(slug string, handlerFunc func(http.ResponseWriter, *http.Request)) {
 	r.router.HandleFunc(slug, handlerFunc).Methods("GET")
 }
+
+func (r *Router) Serve(w http.ResponseWriter, req *http.Request) {
+	r.router.ServeHTTP(w, req)
+}
